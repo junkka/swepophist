@@ -1,0 +1,13 @@
+Package: swepophist
+Title: Swedish population history data
+Version: 0.1
+Authors@R: "Johan Junkka <johan.junkka@gmail.com> [aut, cre]"
+Description: Data on historical demographic data for Sweden
+Depends: R (>= 3.1.2)
+License: CC BY-NC-SA 4.0
+LazyData: true
+Suggests: knitr,
+    ggplot2,
+    tidyr,
+    dplyr
+VignetteBuilder: knitr
