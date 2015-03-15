@@ -18,4 +18,23 @@ tot <- mfrt %>%
 
 mfrt <- rbind(mfrt, tot)
 
+update_encoding <- function(x) {
+  Encoding(levels(x)) <- "UTF-8"
+  levels(x) <- iconv(
+    levels(x), 
+    "UTF-8",
+    "latin1" 
+  )
+
+  Encoding(levels(x)) <- "latin1"
+  levels(x) <- iconv(
+    levels(x), 
+    "latin1", 
+    "UTF-8"
+  )
+  return(x)
+}
+
+mfrt$context <- update_encoding(mfrt$context)
+
 save(mfrt, file = "data/mfrt.rda")
