@@ -35,3 +35,20 @@ NULL
 #'   from Th. Berg, Om dödligheten i första lefnadsåret, Statistisk 
 #'   tidskrift 1869. 1871-1952, Hofsten Lundström Swedish Population History
 NULL
+
+
+#' @name swe_pop_age
+#' @title National population by age 1750-1967
+#' @description Population by age 1750-1967 in Sweden on a national level
+#' @docType data
+#' @usage data(swe_pop_age)
+#' @format A data frame with 300 rows and 3 variables:
+#' \describe{
+#'   \item{year}{Year}
+#'   \item{age}{Age group}
+#'   \item{n}{Population in group}
+#' }
+#' @source Sverige. Statistiska centralbyrån (1969). Historisk statistik för 
+#'   Sverige. D. 1, Befolkning 1720-1967 = [Population 1720-1967]. (2. uppl.) 
+#'   Örebro: Statistiska centralbyrån (SCB).
+NULL
