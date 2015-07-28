@@ -3,7 +3,7 @@ library(stringr)
 library(tidyr)
 library(dplyr)
 
-raw <- read.csv("data-raw/hofsten_mfrt.csv")
+raw <- read.csv("data-raw/data/hofsten_mfrt.csv")
 
 mfrt <- raw %>% gather(age, fert, X15_19:X45_59) %>% 
   filter(!is.na(fert)) %>% 
