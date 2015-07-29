@@ -1,0 +1,63 @@
+---
+title: "Swedish historical data"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{shdd}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+# Marital fertility rate
+
+```{r init}
+library(swepophist)
+library(ggplot2)
+library(dplyr)
+```
+
+```{r data, fig.width=7, fig.height=4}
+d <- filter(mfrt, age == "total") %>% 
+  mutate(
+    col = ifelse(county_code %in% c(9,2), "low", "norm"),
+    col = ifelse(county_code %in% c(25,24), "high", col),
+    col = ifelse(is.na(county_code), "total", col)
+  )
+
+ggplot(d, aes(to, fert, group = context, color = col)) + 
+  xlim(1880,1961) + geom_line() + theme_minimal() + 
+  scale_color_manual(values = c("red", "blue","grey","black")) + 
+  theme(legend.position = "bottom")
+```
+
+## Population by age
+
+```{r, fig.width=7, fig.height=4}
+
+df <- pop_age %>%
+  group_by(year) %>%
+  summarise(p = sum(pop, na.rm = T))
+
+ggplot(df, aes(year, p/1000000, 1)) + geom_line() + 
+  geom_point() +
+  theme_classic()
+
+# cut by span
+cuts <- pop_age %>% filter(year == 1750) %>% select(age) %>% distinct() %>% .$age
+cuts <- c(cuts, 80)
+
+df2 <- pop_age %>%
+  mutate(age_g = cut(age, cuts, right = FALSE)) %>%
+  group_by(year, age_g) %>%
+  summarise(p = sum(pop, na.rm = T))
+
+df3 <- df2 %>%
+  filter(age_g %in% levels(age_g)[c(1:4)]) %>%
+  ungroup()
+
+ggplot(df3, aes(year, p, group = age_g, color = age_g)) + 
+  geom_line() + 
+  scale_color_grey() +
+  theme_classic()
+```
+
