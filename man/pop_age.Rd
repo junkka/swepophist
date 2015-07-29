@@ -13,9 +13,10 @@
   \item{span}{Age span of age group}
 }}
 \source{
-Sverige. Statistiska centralbyrån (1969). Historisk statistik för
-  Sverige. D. 1, Befolkning 1720-1967 = [Population 1720-1967]. (2. uppl.)
-  Örebro: Statistiska centralbyrån (SCB); Hofsten, E. & Lundström, H. (1976). Swedish population
+Statistiska centralbyrån. \url{http://www.scb.se/en_/Finding-statistics/
+  Statistics-by-subject-area/Population/Population-composition/Population-statistics/
+  Aktuell-Pong/25795/Yearly-statistics--The-whole-country/105505/};
+  Hofsten, E. & Lundström, H. (1976). Swedish population
   history: main trends from 1750 to 1970. [Stockholm]: [LiberFörlag].
 }
 \usage{

@@ -57,6 +57,7 @@ swe_pop_age <- tbl_df(raw) %>% gather(age, n, -year) %>%
   ) %>% rename(pop = n) %>%
   filter(year < 1861)
 
-pop_age <- rbind(age_pop, swe_pop_age) %>% arrange(year)
+pop_age <- rbind(age_pop, swe_pop_age) %>% arrange(year) %>%
+  as.data.frame()
 
 save(pop_age, file = "data/pop_age.rda")
