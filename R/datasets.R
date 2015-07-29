@@ -12,16 +12,16 @@
 #'   \item{fert}{Fertility rate}
 #'   \item{county_code}{County code}
 #' }
-#' @source Table 2.3 Marital fertility rates for period, 1751-1970; 
-#'   Table 6.18 Age specific rates of marital fertlity for the counties 
-#'   1881-1962. Hofsten, E. & Lundström, H. (1976). Swedish population 
+#' @source Table 2.3 Marital fertility rates for period, 1751-1970;
+#'   Table 6.18 Age specific rates of marital fertlity for the counties
+#'   1881-1962. Hofsten, E. & Lundström, H. (1976). Swedish population
 #'   history: main trends from 1750 to 1970. [Stockholm]: [LiberFörlag].
 NULL
 
 
 #' @name imr
 #' @title Infant mortality rates
-#' @description County level inafant mortality rates 1811-1972 
+#' @description County level inafant mortality rates 1811-1972
 #' @docType data
 #' @usage imr
 #' @format A data frame with 550 rows and 4 variables:
@@ -31,24 +31,27 @@ NULL
 #'   \item{from}{Start year}
 #'   \item{to}{End year}
 #' }
-#' @source 1811-1859, Tabellverket. 1860-1866 
-#'   from Th. Berg, Om dödligheten i första lefnadsåret, Statistisk 
+#' @source 1811-1859, Tabellverket. 1860-1866
+#'   from Th. Berg, Om dödligheten i första lefnadsåret, Statistisk
 #'   tidskrift 1869. 1871-1952, Hofsten Lundström Swedish Population History
 NULL
 
 
-#' @name swe_pop_age
-#' @title National population by age 1750-1967
-#' @description Population by age 1750-1967 in Sweden on a national level
+#' @name pop_age
+#' @title National population by age and gender 1750-2014
+#' @description Population by age and gender 1750-2014 in Sweden on a national level
 #' @docType data
-#' @usage data(swe_pop_age)
-#' @format A data frame with 300 rows and 3 variables:
+#' @usage data(pop_age)
+#' @format A data frame with 31240 rows and 5 variables:
 #' \describe{
 #'   \item{year}{Year}
-#'   \item{age}{Age group}
-#'   \item{n}{Population in group}
+#'   \item{gender}{Male, female or all}
+#'   \item{pop}{Population}
+#'   \item{age}{Star age of age group}
+#'   \item{span}{Age span of age group}
 #' }
-#' @source Sverige. Statistiska centralbyrån (1969). Historisk statistik för 
-#'   Sverige. D. 1, Befolkning 1720-1967 = [Population 1720-1967]. (2. uppl.) 
-#'   Örebro: Statistiska centralbyrån (SCB).
+#' @source Sverige. Statistiska centralbyrån (1969). Historisk statistik för
+#'   Sverige. D. 1, Befolkning 1720-1967 = [Population 1720-1967]. (2. uppl.)
+#'   Örebro: Statistiska centralbyrån (SCB); Hofsten, E. & Lundström, H. (1976). Swedish population
+#'   history: main trends from 1750 to 1970. [Stockholm]: [LiberFörlag].
 NULL
