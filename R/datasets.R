@@ -56,3 +56,20 @@ NULL
 #'   Hofsten, E. & Lundström, H. (1976). Swedish population
 #'   history: main trends from 1750 to 1970. [Stockholm]: [LiberFörlag].
 NULL
+
+#' @name pop_fert
+#' @title Age-specific Fertility in Sweden 1751-1967
+#' @description National level age-specific fertility rates in Sweden 
+#'   1751 to 1967.
+#' @docType data
+#' @usage data(pop_fert)
+#' @format A data frame with 315 rows and 4 variables:
+#' \describe{
+#'   \item{start}{Start year}
+#'   \item{end}{End year}
+#'   \item{age_g}{Age group}
+#'   \item{fert}{Fertility rate}
+#' }
+#' @source Hofsten, E. & Lundström, H. (1976). Swedish population
+#'   history: main trends from 1750 to 1970. [Stockholm]: [LiberFörlag].
+NULL
