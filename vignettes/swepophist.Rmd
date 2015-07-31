@@ -34,6 +34,7 @@ ggplot(d, aes(to, fert, group = context, color = col)) +
 
 ```{r, fig.width=7, fig.height=4}
 df1 <- pop_fert %>% 
+  filter(context == "Sweden") %>% 
   group_by(end) %>% 
   summarise(tfr = (sum(fert)*5)/1000) %>% 
   mutate(rate = "Marital")
@@ -51,6 +52,18 @@ ggplot(df2, aes(end, tfr, group = rate)) +
     label = c("TFR", "Martial"), color = c("red", "blue")) +
   theme_classic() +
   theme(legend.position = "none")
+```
+
+## Age-specific fertility rates
+
+```{r, fig.width=7, fig.height=3}
+d1 <- pop_fert %>% filter(context != "Sweden", end >= 1850)
+d2 <- pop_fert %>% filter(context == "Sweden", end >= 1850)
+ggplot() + 
+  geom_line(data = d1, aes(end, fert, group = context), color = "grey") +
+  geom_line(data = d2, aes(end, fert, group = context), color = "black", size = 1) +
+  facet_wrap(~age_g, nrow = 1) +
+  theme_classic()
 ```
 
 ## Population by age

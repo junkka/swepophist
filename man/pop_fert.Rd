@@ -4,8 +4,9 @@
 \name{pop_fert}
 \alias{pop_fert}
 \title{Age-specific Fertility in Sweden 1751-1967}
-\format{A data frame with 315 rows and 4 variables:
+\format{A data frame with 1890 rows and 5 variables:
 \describe{
+  \item{context}{Context area, county name or national level}
   \item{start}{Start year}
   \item{end}{End year}
   \item{age_g}{Age group}
