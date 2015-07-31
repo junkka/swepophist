@@ -63,8 +63,9 @@ NULL
 #'   1751 to 1967.
 #' @docType data
 #' @usage data(pop_fert)
-#' @format A data frame with 315 rows and 4 variables:
+#' @format A data frame with 1890 rows and 5 variables:
 #' \describe{
+#'   \item{context}{Context area, county name or national level}
 #'   \item{start}{Start year}
 #'   \item{end}{End year}
 #'   \item{age_g}{Age group}
