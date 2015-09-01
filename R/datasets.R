@@ -74,3 +74,18 @@ NULL
 #' @source Hofsten, E. & Lundström, H. (1976). Swedish population
 #'   history: main trends from 1750 to 1970. [Stockholm]: [LiberFörlag].
 NULL
+
+#' @name county_pop
+#' @title County level population 1749-2010
+#' @description County level population 1749-2010.
+#' @docType data
+#' @usage data(county_pop)
+#' @format A data frame with 1358 rows and 4 variables:
+#' \describe{
+#'   \item{county}{County code}
+#'   \item{name}{Name of county}
+#'   \item{year}{Year}
+#'   \item{pop}{Population}
+#' }
+#' @source Statistiska centralbyrån.
+NULL
