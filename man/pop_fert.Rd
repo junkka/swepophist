@@ -7,6 +7,7 @@
 \format{A data frame with 1890 rows and 5 variables:
 \describe{
   \item{context}{Context area, county name or national level}
+  \item{county_code}{County code}
   \item{start}{Start year}
   \item{end}{End year}
   \item{age_g}{Age group}
